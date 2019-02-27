@@ -1,0 +1,78 @@
+<div *ngIf="itemDetalhe$ | async as item">
+    <div class="row">
+        <h4 class="col-8 mb-3">Detalhe do Item</h4>
+        <span *ngIf="item.promocao" class="badge badge-secondary col-2 align-self-center">Promoção</span>
+    </div>
+
+    <hr class="mb-4">
+
+    <div class="row">
+        <div class="col-md-12 mb-3">
+            <label for="nomenclatura">Nomeclatura</label>
+            <input type="text" class="form-control" id="nomenclatura" placeholder="Nomeclatura" [ngModel]="item.nomenclatura" disabled>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12 mb-3">
+            <label for="codigo">Nomeclatura detalhada</label>
+            <input type="text" class="form-control" id="codigo" placeholder="Nomeclatura detalhada" [ngModel]="item.nomenclaturaDetalhada" disabled>
+        </div>
+    </div>
+
+    <div class="row">
+
+        <div class="col-md-4 mb-3">
+            <label for="precoPor">Preço Por</label>
+            <input type="text" class="form-control" id="precoPor" placeholder="Preço De" [ngModel]="item.precoPor" disabled currencyMask>
+        </div>
+
+        <div class="col-md-4 mb-3">
+            <label for="precoDe">Preço De</label>
+            <input type="text" class="form-control" id="precoDe" placeholder="Preço Por" [ngModel]="item.precoDe" disabled currencyMask>
+        </div>
+
+        <div class="col-md-4 mb-3">
+            <label for="situacaoItem">Situação</label>
+            <input type="text" class="form-control" id="situacaoItem" placeholder="Codigo Item" [ngModel]="item.situacaoItem" disabled>
+        </div>
+
+    </div>
+
+    <div class="row">
+        <div class="col-md-6 mb-3">
+            <label for="principioAtivo">Princípio Ativo</label>
+            <input type="text" class="form-control" id="principioAtivo" placeholder="Preço De" [ngModel]="item.principioAtivo" disabled>
+        </div>
+
+        <div class="col-md-6 mb-3">
+            <label for="classeTerapeutica">Classe Terapeutica</label>
+            <input type="text" class="form-control" id="classeTerapeutica" placeholder="Preço Por" [ngModel]="item.classeTerapeutica" disabled>
+        </div>
+    </div>
+
+
+    <fieldset class="container border p-2 mb-3">
+        <legend class="w-auto">Advertências</legend>
+        <div class="row">
+            <div *ngFor="let advertencia of item.advertencias " class="col-md-12 mr-0">
+                <span class="lead badge bg-light text-wrap text-left" style="font-size: 12px">
+                     {{ advertencia }}
+                </span>
+            </div>
+        </div>
+    </fieldset>
+
+
+    <fieldset class="container border p-2">
+        <legend class="w-auto">Categorias</legend>
+        <div class="row">
+            <div *ngFor="let categoria of item.categorias " class="col-md-2 mr-0">
+                <span class="lead badge badge-warning text-wrap text-left" style="font-size: 12px">
+                     {{ categoria.descricao }}
+                </span>
+            </div>
+        </div>
+
+    </fieldset>
+</div>

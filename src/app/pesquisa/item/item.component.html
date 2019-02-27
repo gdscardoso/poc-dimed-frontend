@@ -1,0 +1,16 @@
+<div class="card-deck mb-6 text-center">
+  <div class="card mb-6 box-shadow">
+    <div class="card-header">
+      <h4 class="my-0 font-weight-normal">{{ item.descricao }}</h4>
+    </div>
+    <div class="card-body">
+      <h3 class="card-title pricing-card-title">{{ item.preco | currency:'R$' }}</h3>
+      <ul class="list-unstyled mt-4 mb-6">
+        <li>Codigo do Produto: {{ item.codigoItem }}</li>
+        <li>Estoque do Produto: {{ item.estoque }} itens.</li>
+        <li>EAN: {{ item.ean}}</li>
+      </ul>
+      <button type="button" class="btn btn-lg btn-block btn-outline-primary" [routerLink]="['/detalhe', item.codigoItem]">Detalhe</button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,25 @@
+<div class="shadow-sm p-3 mb-5 bg-white rounded">
+
+    <div class="d-flex align-items-center">
+        <input [(ngModel)]="query"
+               [typeaheadAsync]="true"
+               [typeahead]="dataSource"
+               (typeaheadLoading)="onLoading($event)"
+               (typeaheadOnSelect)="onSelect($event)"
+               (typeaheadNoResults)="onNoResult($event)"
+               typeaheadOptionField="nomenclaturaVarejo"
+               typeaheadScrollable="true"
+               typeaheadOptionsInScrollableView="10"
+               typeaheadWaitMs="300"
+               typeaheadMinLength="4"
+               placeholder="Informe aqui o nome do produto que deseja pesquisar"
+               class="form-control border-white border-0 col-11">
+        <div *ngIf="loading" class="spinner-grow ml-auto"></div>
+    </div>
+
+</div>
+<div *ngIf="noResults">Nenhum resultado encontrado</div>
+
+<div *ngIf="selected$ | async as selected">
+    <app-item [item]="selected"></app-item>
+</div>
