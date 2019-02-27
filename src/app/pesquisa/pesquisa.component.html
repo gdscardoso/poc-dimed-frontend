@@ -14,11 +14,11 @@
                typeaheadMinLength="4"
                placeholder="Informe aqui o nome do produto que deseja pesquisar"
                class="form-control border-white border-0 col-11">
-        <div *ngIf="loading" class="spinner-grow ml-auto"></div>
+        <div id="search_loading" *ngIf="loading" class="spinner-grow ml-auto"></div>
     </div>
 
 </div>
-<div *ngIf="noResults">Nenhum resultado encontrado</div>
+<div id="no_result" *ngIf="noResults">Nenhum resultado encontrado</div>
 
 <div *ngIf="selected$ | async as selected">
     <app-item [item]="selected"></app-item>

@@ -1,9 +1,8 @@
-import {getTestBed, TestBed} from '@angular/core/testing';
+import { getTestBed, TestBed } from '@angular/core/testing';
 
-import {FilialService} from './filial.service';
-import {HttpClient, HttpParams} from '@angular/common/http';
-import {HttpClientTestingModule, HttpTestingController} from '@angular/common/http/testing';
-import {FilialStub} from '../stub/filial.stub.spec';
+import { FilialService } from './filial.service';
+import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
+import { FilialStub } from '../stub/filial.stub.spec';
 
 describe('FilialService', () => {
     let injector: TestBed;

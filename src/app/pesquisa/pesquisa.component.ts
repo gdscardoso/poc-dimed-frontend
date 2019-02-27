@@ -1,10 +1,9 @@
-import {Component, OnInit} from '@angular/core';
-import {Observable} from 'rxjs';
-import {TypeaheadMatch} from 'ngx-bootstrap';
-import {mergeMap, tap} from 'rxjs/operators';
-import {ItemService} from '../shared/item-service/service/item.service';
-import {ItemResponse} from './model/item.response';
-import {PesquisaService} from './pesquisa.service';
+import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { TypeaheadMatch } from 'ngx-bootstrap';
+import { mergeMap, tap } from 'rxjs/operators';
+import { ItemResponse } from './model/item.response';
+import { PesquisaService } from './pesquisa.service';
 
 @Component({
     selector: 'app-pesquisa',
@@ -20,7 +19,6 @@ export class PesquisaComponent implements OnInit {
     dataSource: Observable<ItemResponse[]>;
 
     constructor(
-        private itemService: ItemService,
         private pesquisaService: PesquisaService) {
     }
 
@@ -42,7 +40,6 @@ export class PesquisaComponent implements OnInit {
     }
 
     onSelect(e: TypeaheadMatch): void {
-        console.log(e);
         this.selected$ = this.pesquisaService.getItem(e.item.codigoItem);
     }
 
