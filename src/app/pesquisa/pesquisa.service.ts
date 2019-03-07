@@ -6,6 +6,7 @@ import { forkJoin, Observable, of } from 'rxjs';
 import { ItemResponse } from './model/item.response';
 import { catchError, filter, map } from 'rxjs/operators';
 import { Builder } from 'builder-pattern';
+import { ItemOutputModel } from '../shared/item-service/model/item-output.model';
 
 @Injectable({
   providedIn: 'root'
@@ -42,7 +43,7 @@ export class PesquisaService {
       );
   }
 
-  public getItemAutocomplete(query: string): Observable<ItemResponse[]> {
+  public getItemAutocomplete(query: string): Observable<ItemOutputModel[]> {
     return this.itemService.getAutocomplete(query)
       .pipe(
         catchError(err => of(null))

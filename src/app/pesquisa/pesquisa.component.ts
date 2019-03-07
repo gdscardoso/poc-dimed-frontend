@@ -4,6 +4,7 @@ import { TypeaheadMatch } from 'ngx-bootstrap';
 import { mergeMap, tap } from 'rxjs/operators';
 import { ItemResponse } from './model/item.response';
 import { PesquisaService } from './pesquisa.service';
+import { ItemOutputModel } from '../shared/item-service/model/item-output.model';
 
 @Component({
     selector: 'app-pesquisa',
@@ -31,7 +32,7 @@ export class PesquisaComponent implements OnInit {
         );
     }
 
-    pesquisar(query: string): Observable<ItemResponse[]> {
+    pesquisar(query: string): Observable<ItemOutputModel[]> {
         return this.pesquisaService.getItemAutocomplete(query);
     }
 
