@@ -1,9 +1,9 @@
 import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
 import {map, switchMap} from 'rxjs/operators';
-import {MostruariosService} from '../../shared/mostruario-service/service/mostruarios.service';
+import {MostruariosService} from '../../shared/mostruario/service/mostruarios.service';
 import {Observable} from 'rxjs';
-import {ItensOutputModel} from '../../shared/mostruario-service/model/item-detalhe-output.model';
+import {ItensOutputModel} from '../../shared/mostruario/model/item-detalhe-output.model';
 
 @Component({
     selector: 'app-item-detalhe',

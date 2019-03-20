@@ -1,6 +1,6 @@
 import { ItemResponse } from '../model/item.response';
 import { Builder } from 'builder-pattern';
-import { ItemOutputModel } from '../../shared/item-service/model/item-output.model';
+import { ItemOutputModel } from '../../shared/item/model/item-output.model';
 
 export class PesquisaStub {
 

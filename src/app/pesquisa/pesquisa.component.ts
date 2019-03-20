@@ -4,7 +4,7 @@ import { TypeaheadMatch } from 'ngx-bootstrap';
 import { mergeMap, tap } from 'rxjs/operators';
 import { ItemResponse } from './model/item.response';
 import { PesquisaService } from './pesquisa.service';
-import { ItemOutputModel } from '../shared/item-service/model/item-output.model';
+import { ItemOutputModel } from '../shared/item/model/item-output.model';
 
 @Component({
     selector: 'app-pesquisa',

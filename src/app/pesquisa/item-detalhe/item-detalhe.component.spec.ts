@@ -1,12 +1,12 @@
 import {async, ComponentFixture, fakeAsync, TestBed, tick} from '@angular/core/testing';
 
 import {ItemDetalheComponent} from './item-detalhe.component';
-import {MostruariosService} from '../../shared/mostruario-service/service/mostruarios.service';
+import {MostruariosService} from '../../shared/mostruario/service/mostruarios.service';
 import {ActivatedRoute} from '@angular/router';
 import {of} from 'rxjs';
 import {FormsModule} from '@angular/forms';
 import {HttpClientTestingModule} from '@angular/common/http/testing';
-import {MostruarioStub} from '../../shared/mostruario-service/stub/mostruario.stub.spec';
+import {MostruarioStub} from '../../shared/mostruario/stub/mostruario.stub.spec';
 import clock = jasmine.clock;
 
 describe('ItemDetalheComponent', () => {

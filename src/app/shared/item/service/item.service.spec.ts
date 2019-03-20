@@ -1,9 +1,9 @@
 import {getTestBed, TestBed} from '@angular/core/testing';
 
 import {ItemService} from './item.service';
-import {FilialService} from '../../filial-service/service/filial.service';
+import {FilialService} from '../../filial/service/filial.service';
 import {HttpClientTestingModule, HttpTestingController} from '@angular/common/http/testing';
-import {FilialStub} from '../../filial-service/stub/filial.stub.spec';
+import {FilialStub} from '../../filial/stub/filial.stub.spec';
 import {ItemStub} from '../stub/item.stub.spec';
 
 describe('ItemService', () => {

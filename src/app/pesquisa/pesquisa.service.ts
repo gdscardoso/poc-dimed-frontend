@@ -1,12 +1,12 @@
 import { Injectable } from '@angular/core';
-import { FilialService } from '../shared/filial-service/service/filial.service';
-import { MostruariosService } from '../shared/mostruario-service/service/mostruarios.service';
-import { ItemService } from '../shared/item-service/service/item.service';
+import { FilialService } from '../shared/filial/service/filial.service';
+import { MostruariosService } from '../shared/mostruario/service/mostruarios.service';
+import { ItemService } from '../shared/item/service/item.service';
 import { forkJoin, Observable, of } from 'rxjs';
 import { ItemResponse } from './model/item.response';
 import { catchError, filter, map } from 'rxjs/operators';
 import { Builder } from 'builder-pattern';
-import { ItemOutputModel } from '../shared/item-service/model/item-output.model';
+import { ItemOutputModel } from '../shared/item/model/item-output.model';
 
 @Injectable({
   providedIn: 'root'

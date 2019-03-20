@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
 import { PesquisaService } from './pesquisa.service';
-import { FilialService } from '../shared/filial-service/service/filial.service';
-import { MostruariosService } from '../shared/mostruario-service/service/mostruarios.service';
-import { ItemService } from '../shared/item-service/service/item.service';
+import { FilialService } from '../shared/filial/service/filial.service';
+import { MostruariosService } from '../shared/mostruario/service/mostruarios.service';
+import { ItemService } from '../shared/item/service/item.service';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { of } from 'rxjs';
-import { MostruarioStub } from '../shared/mostruario-service/stub/mostruario.stub.spec';
-import { FilialStub } from '../shared/filial-service/stub/filial.stub.spec';
+import { MostruarioStub } from '../shared/mostruario/stub/mostruario.stub.spec';
+import { FilialStub } from '../shared/filial/stub/filial.stub.spec';
 import { PesquisaStub } from './stub/pesquisa.stub';
 
 describe('PesquisaService', () => {

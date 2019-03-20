@@ -1,9 +1,9 @@
 import {getTestBed, TestBed} from '@angular/core/testing';
 
 import {MostruariosService} from './mostruarios.service';
-import {ItemService} from '../../item-service/service/item.service';
+import {ItemService} from '../../item/service/item.service';
 import {HttpClientTestingModule, HttpTestingController} from '@angular/common/http/testing';
-import {FilialStub} from '../../filial-service/stub/filial.stub.spec';
+import {FilialStub} from '../../filial/stub/filial.stub.spec';
 import {MostruarioStub} from '../stub/mostruario.stub.spec';
 
 describe('MostruariosService', () => {
